@@ -1,0 +1,9 @@
+o conceito - o programa deve facilitar a criação e o preenchimento de dados em planilha
+o objetivo é evitar o trabalhador de ficar preenchendo e fazendo planilha, ele ja ganha o resultado
+
+
+Usuário informa número de colunas
+
+Usuário digita dados separados por vírgula
+
+Programa gera um .xlsx organizado
