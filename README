@@ -39,11 +39,3 @@ Ideal para quem já possui o template pronto e quer apenas inserir novas linhas 
 
 [ ] Proteção contra CSV Injection (Segurança de Dados).
 
-Por que isso faz diferença?
-Markdown: Usar tabelas e listas deixa o projeto com cara de "profissional".
-
-Backlog: Mostrar o que você pretende fazer (aquelas ideias que salvamos na lista!) prova que você tem visão de produto e não apenas "copiou um código".
-
-Terminologia: Usar termos como "Incremental", "Modular" e "Validação" mostra que você conhece o vocabulário da área.
-
-Quando você acordar e for mexer no código, quer que eu te ajude a escrever a lógica da função buscarRegistro? Ela é a que mais impressiona em entrevistas por envolver filtros de dados.
