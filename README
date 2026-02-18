@@ -7,3 +7,15 @@ Usuário informa número de colunas
 Usuário digita dados separados por vírgula
 
 Programa gera um .xlsx organizado
+
+exemplo de criar - 
+
+( ex: nome,idade,joao,maria,32,32)
+
+nome e idade sao os campos a ser preenchidos
+joao e maria sao os nomes, e 32 é a idade dos dois, 32 ficara abaixo da idade e nome abaixo do nomes
+
+
+exemplo de preencher -
+é bom se voce tem ja uma planilha com os campos feitos e so precisa preencher
+( ex: joao,32, maria, 32)
