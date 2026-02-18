@@ -1,21 +1,49 @@
-o conceito - o programa deve facilitar a criação e o preenchimento de dados em planilha
-o objetivo é evitar o trabalhador de ficar preenchendo e fazendo planilha, ele ja ganha o resultado
+📊 Excel Manager CLI
+Excel Manager é uma ferramenta de linha de comando (CLI) desenvolvida em Python para automatizar a criação e o preenchimento de planilhas .xlsx. O foco é produtividade: eliminar o trabalho manual repetitivo de abrir o Excel para tarefas simples de entrada de dados.
 
-- MVP
-Usuário informa número de colunas
+🚀 Funcionalidades (MVP)
+Criação Inteligente: Gera planilhas do zero a partir de uma string de dados.
 
-Usuário digita dados separados por vírgula
+Distribuição Automática: Organiza os dados em colunas baseado na entrada do usuário (ex: define cabeçalhos e preenche as linhas correspondentes).
 
-Programa gera um .xlsx organizado
+Preenchimento Rápido: Adiciona novos dados a planilhas já existentes de forma incremental.
 
-exemplo de criar - 
+Tratamento de Erros: Valida entradas numéricas para evitar crashes durante a execução.
 
-( ex: nome,idade,joao,maria,32,32)
+🛠️ Tecnologias Utilizadas
+Python 3.x
 
-nome e idade sao os campos a ser preenchidos
-joao e maria sao os nomes, e 32 é a idade dos dois, 32 ficara abaixo da idade e nome abaixo do nomes
+Bibliotecas de Manipulação: Openpyxl (ou a que você estiver usando no core.py)
 
+Estrutura: Modular (Separação entre lógica de interface e lógica de negócio)
 
-exemplo de preencher -
-é bom se voce tem ja uma planilha com os campos feitos e so precisa preencher
-( ex: joao,32, maria, 32)
+📖 Como Funciona?
+1. Criar Planilha
+Ao informar os dados e o número de colunas, o programa faz o mapeamento automático.
+
+Entrada: nome, idade, joao, maria, 32, 32 | Colunas: 2
+
+Resultado:
+| nome | idade |
+| :--- | :--- |
+| joao | 32 |
+| maria | 32 |
+
+2. Preencher Planilha
+Ideal para quem já possui o template pronto e quer apenas inserir novas linhas sem abrir o editor de planilhas.
+
+🛠️ Próximos Passos (Backlog)
+[ ] Implementar busca de registros por termo.
+
+[ ] Adicionar contador de linhas e visualização de cabeçalho.
+
+[ ] Proteção contra CSV Injection (Segurança de Dados).
+
+Por que isso faz diferença?
+Markdown: Usar tabelas e listas deixa o projeto com cara de "profissional".
+
+Backlog: Mostrar o que você pretende fazer (aquelas ideias que salvamos na lista!) prova que você tem visão de produto e não apenas "copiou um código".
+
+Terminologia: Usar termos como "Incremental", "Modular" e "Validação" mostra que você conhece o vocabulário da área.
+
+Quando você acordar e for mexer no código, quer que eu te ajude a escrever a lógica da função buscarRegistro? Ela é a que mais impressiona em entrevistas por envolver filtros de dados.
