@@ -13,7 +13,7 @@ Tratamento de Erros: Valida entradas numéricas para evitar crashes durante a ex
 🛠️ Tecnologias Utilizadas
 Python 3.x
 
-Bibliotecas de Manipulação: Openpyxl (ou a que você estiver usando no core.py)
+Bibliotecas de Manipulação: Openpyxl
 
 Estrutura: Modular (Separação entre lógica de interface e lógica de negócio)
 
