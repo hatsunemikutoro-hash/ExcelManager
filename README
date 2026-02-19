@@ -1,15 +1,41 @@
-o conceito - o programa deve facilitar a criação e o preenchimento de dados em planilha
-o objetivo é evitar o trabalhador de ficar preenchendo e fazendo planilha, ele ja ganha o resultado
+📊 Excel Manager CLI
+Excel Manager é uma ferramenta de linha de comando (CLI) desenvolvida em Python para automatizar a criação e o preenchimento de planilhas .xlsx. O foco é produtividade: eliminar o trabalho manual repetitivo de abrir o Excel para tarefas simples de entrada de dados.
 
-- MVP
-Usuário informa número de colunas
+🚀 Funcionalidades (MVP)
+Criação Inteligente: Gera planilhas do zero a partir de uma string de dados.
 
-Usuário digita dados separados por vírgula
+Distribuição Automática: Organiza os dados em colunas baseado na entrada do usuário (ex: define cabeçalhos e preenche as linhas correspondentes).
 
-Programa gera um .xlsx organizado
+Preenchimento Rápido: Adiciona novos dados a planilhas já existentes de forma incremental.
 
-Ideias para o Excel Manager CLI
-listarPlanilhas(): Listar nomes de todas as abas (sheets) de um arquivo.
-lerCabecalho(): Imprimir apenas a primeira linha para consulta.
-contarLinhas(): Retornar a quantidade de entradas no arquivo.
-buscarRegistro(): Buscar um termo específico e retornar as linhas que o contêm.
+Tratamento de Erros: Valida entradas numéricas para evitar crashes durante a execução.
+
+🛠️ Tecnologias Utilizadas
+Python 3.x
+
+Bibliotecas de Manipulação: Openpyxl
+
+Estrutura: Modular (Separação entre lógica de interface e lógica de negócio)
+
+📖 Como Funciona?
+1. Criar Planilha
+Ao informar os dados e o número de colunas, o programa faz o mapeamento automático.
+
+Entrada: nome, idade, joao, maria, 32, 32 | Colunas: 2
+
+Resultado:
+| nome | idade |
+| :--- | :--- |
+| joao | 32 |
+| maria | 32 |
+
+2. Preencher Planilha
+Ideal para quem já possui o template pronto e quer apenas inserir novas linhas sem abrir o editor de planilhas.
+
+🛠️ Próximos Passos (Backlog)
+[ ] Implementar busca de registros por termo.
+
+[ ] Adicionar contador de linhas e visualização de cabeçalho.
+
+[ ] Proteção contra CSV Injection (Segurança de Dados).
+
