@@ -7,3 +7,9 @@ Usuário informa número de colunas
 Usuário digita dados separados por vírgula
 
 Programa gera um .xlsx organizado
+
+Ideias para o Excel Manager CLI
+listarPlanilhas(): Listar nomes de todas as abas (sheets) de um arquivo.
+lerCabecalho(): Imprimir apenas a primeira linha para consulta.
+contarLinhas(): Retornar a quantidade de entradas no arquivo.
+buscarRegistro(): Buscar um termo específico e retornar as linhas que o contêm.

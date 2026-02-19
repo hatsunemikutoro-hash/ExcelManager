@@ -1,11 +1,14 @@
-from core import criarPlanilha, preencherPlanilha
+from core import criarPlanilha, preencherPlanilha, contarLinhas, buscarRegistro, lerCabecalhos, listarPlanilha
 
 while True:
     print("===== EXCEL MANAGER CLI VERSION =====")
     print("1. CRIAR PLANILHA")
     print("2. PREENCHER PLANILHA")
+    print("3. CONTAR LINHAS")
+    print("4. FILTRAR PALAVRA")
+    print("5. LER CABECALHOS")
+    print("6. LISTAR PLANILHA")
     opt = int(input("> "))
-
     if opt == 1:
         try:
             data = input("Escreva os dados separando por VIRGULA ( ex: nome,idade,joao,maria,32,32): ")
@@ -36,5 +39,30 @@ while True:
         except ValueError:
             print("Valores invalidos")
             exit()
+    elif opt == 3:
+        try:
+            path = input("Caminho do arquivo: ")
+            print(f"O arquivo tem {contarLinhas(path)} linhas.")
+        except Exception as e:
+            print("Algum erro ocorreu.")
+    elif opt == 4:
+        try:
+            path = input("Caminho do arquivo: ")
+            filtro = input("Que palavra deseja buscar?: ")
+            print(buscarRegistro(path, filtro))
+        except Exception as e:
+            print("Ocorreu um erro.")
+    elif opt == 5:
+        try:
+            path = input("Caminho do arquivo: ")
+            print(lerCabecalhos(path))
+        except Exception as e:
+            print("Ocorreu um erro.")
+    elif opt == 6:
+        try:
+            path = input("Caminho do arquivo: ")
+            print(listarPlanilha(path))
+        except Exception as e:
+            print("Ocorreu um erro.")
     else:
         print("Opções invalidas")
