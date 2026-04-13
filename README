@@ -1,41 +1,86 @@
-📊 Excel Manager CLI
-Excel Manager é uma ferramenta de linha de comando (CLI) desenvolvida em Python para automatizar a criação e o preenchimento de planilhas .xlsx. O foco é produtividade: eliminar o trabalho manual repetitivo de abrir o Excel para tarefas simples de entrada de dados.
+# 📊 Excel Manager
 
-🚀 Funcionalidades (MVP)
-Criação Inteligente: Gera planilhas do zero a partir de uma string de dados.
+Ferramenta desktop para automatizar operações com planilhas Excel — sem precisar abrir o Excel.
 
-Distribuição Automática: Organiza os dados em colunas baseado na entrada do usuário (ex: define cabeçalhos e preenche as linhas correspondentes).
+---
 
-Preenchimento Rápido: Adiciona novos dados a planilhas já existentes de forma incremental.
+## ✨ Funcionalidades
 
-Tratamento de Erros: Valida entradas numéricas para evitar crashes durante a execução.
+| Função           | Descrição                                                            |
+|------------------|----------------------------------------------------------------------|
+| **Criar**        | Gera um arquivo `.xlsx` novo do zero a partir de dados colados       |
+| **Preencher**    | Injeta dados em uma planilha existente sem sobrescrever o cabeçalho |
+| **Mesclar**      | Une 2+ planilhas em um único arquivo, preservando os cabeçalhos     |
+| **Inspecionar**  | Lê linhas, cabeçalhos e conteúdo sem abrir o Excel                  |
+| **Exportar CSV** | Converte qualquer `.xlsx` em `.csv` com um clique                   |
+| **Buscar**       | Localiza qualquer valor em qualquer célula da planilha               |
+| **Histórico**    | Registro persistente de todas as operações realizadas               |
+| **Tema**         | Alterna entre modo escuro e claro                                    |
 
-🛠️ Tecnologias Utilizadas
-Python 3.x
+---
 
-Bibliotecas de Manipulação: Openpyxl
+## 🚀 Como usar
 
-Estrutura: Modular (Separação entre lógica de interface e lógica de negócio)
+### Opção 1 — Executável (recomendado)
+Baixe o `ExcelManager.exe` e execute diretamente. Nenhuma instalação necessária.
 
-📖 Como Funciona?
-1. Criar Planilha
-Ao informar os dados e o número de colunas, o programa faz o mapeamento automático.
+### Opção 2 — Código-fonte
+**Requisitos:** Python 3.11+
 
-Entrada: nome, idade, joao, maria, 32, 32 | Colunas: 2
+```bash
+# 1. Clone ou extraia o projeto
+# 2. Instale as dependências
+pip install -r requirements.txt
 
-Resultado:
-| nome | idade |
-| :--- | :--- |
-| joao | 32 |
-| maria | 32 |
+# 3. Execute
+python gui.py
+```
 
-2. Preencher Planilha
-Ideal para quem já possui o template pronto e quer apenas inserir novas linhas sem abrir o editor de planilhas.
+---
 
-🛠️ Próximos Passos (Backlog)
-[ ] Implementar busca de registros por termo.
+## 📦 Gerar o executável `.exe`
 
-[ ] Adicionar contador de linhas e visualização de cabeçalho.
+```bash
+pip install pyinstaller
+pyinstaller --onefile --windowed --icon=logo.ico --name="ExcelManager" gui.py
+```
 
-[ ] Proteção contra CSV Injection (Segurança de Dados).
+O executável estará em `dist/ExcelManager.exe`.
 
+---
+
+## 🗂️ Estrutura do Projeto
+
+```
+excel-manager/
+├── gui.py              # Interface gráfica (customtkinter)
+├── core.py             # Lógica de negócio (openpyxl, xlrd)
+├── requirements.txt    # Dependências
+├── logo.ico            # Ícone do app
+└── README.md
+```
+
+---
+
+## 🛠️ Tecnologias
+
+- **Python 3.11+**
+- **customtkinter** — UI moderna em Python
+- **openpyxl** — leitura e escrita de `.xlsx`
+- **xlrd** — suporte a arquivos `.xls` legados
+
+---
+
+## 📋 Formatos suportados
+
+| Formato | Leitura | Escrita |
+|---------|---------|---------|
+| `.xlsx` | ✅      | ✅      |
+| `.xls`  | ✅      | ❌ (salva como `.xlsx`) |
+| `.csv`  | ❌      | ✅ (exportação)         |
+
+---
+
+## 📄 Licença
+
+MIT — livre para uso pessoal e comercial.
